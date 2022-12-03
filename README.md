@@ -1,6 +1,6 @@
 # AoC2022
 
-A collection for my Advent of Code (www.adventofcode.com) solutions using the Nim programming languages (www.nim-lang.com)
+A collection for my Advent of Code (https://adventofcode.com/) solutions using the Nim programming languages (https://nim-lang.org/)
 
 | Nim | Special Notes |
 | --- | ------------- |
