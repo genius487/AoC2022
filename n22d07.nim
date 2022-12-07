@@ -14,7 +14,6 @@ proc dirSizeCalc(crsr: int = 0): (int, int) =
     fileName: string
 
   while cursor <= terminal.high:
-    #echo cursor
     if "$ cd" in terminal[cursor]:
       if ".." in terminal[cursor]:
         fileSize = foldl(files.values.toSeq, a + b)
@@ -28,13 +27,9 @@ proc dirSizeCalc(crsr: int = 0): (int, int) =
         directorySizes[terminal[cursor][5..^1]] = size
 
         cursor = place
-        #echo cursor
 
     elif scanf(terminal[cursor], "$i $+", fileSize, fileName):
-      #echo terminal[cursor]
       files[fileName] = fileSize
-
-    #echo files
 
     inc cursor
 
