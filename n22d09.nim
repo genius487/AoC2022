@@ -4,7 +4,7 @@ var
   motions = readFile("22day09.txt").strip.splitLines
   parts = [0,0]
   rope: seq[seq[int]]
-  knotHistoryP1, knotHistoryP2: HashSet[seq[int]]
+  tailHistoryP1, tailHistoryP2: HashSet[seq[int]]
   direction: string
   steps: int
 
@@ -28,22 +28,23 @@ proc moveKnot(front, back: var seq[int]): seq[int] =
 
   return back
 
+
 for knot in 1..10:
   rope.add @[0,0]
 
-knotHistoryP1 = toHashSet([rope[1]])
-knotHistoryP2 = toHashSet([rope[^1]])
+tailHistoryP1 = toHashSet([rope[1]])
+tailHistoryP2 = toHashSet([rope[^1]])
 
 for line in motions:
   if scanf(line, "$w $i", direction, steps):
     for s in 1..steps:
       discard moveHead(rope[0], direction)
       for knot in 1..rope.high:
-        rope[knot] = moveTail(rope[knot-1], rope[knot])
-      knotHistoryP1.incl rope[1]
-      knotHistoryP2.incl rope[^1]
+        rope[knot] = moveKnot(rope[knot-1], rope[knot])
+      tailHistoryP1.incl rope[1]
+      tailHistoryP2.incl rope[^1]
 
-parts[0] = knotHistoryP1.len
-parts[1] = knotHistoryP2.len
+parts[0] = tailHistoryP1.len
+parts[1] = tailHistoryP2.len
 
 echo parts
