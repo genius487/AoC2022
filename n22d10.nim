@@ -8,7 +8,7 @@ var
   screen: string
   posSprite: seq[int]
   
-for j, job in input:
+for job in input:
   register.add 0
 
   if job == "noop":
