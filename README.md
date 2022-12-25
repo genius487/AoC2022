@@ -10,7 +10,7 @@ A collection for my Advent of Code (https://adventofcode.com/) solutions using t
 | [Day 4](https://github.com/genius487/AoC2022/blob/main/n22d04.nim) |
 | [Day 5](https://github.com/genius487/AoC2022/blob/main/n22d05.nim) |
 | [Day 6](https://github.com/genius487/AoC2022/blob/main/n22d06.nim) |
-| [Day 7](https://github.com/genius487/AoC2022/blob/main/n22d07.nim) |
+| [Day 7](https://github.com/genius487/AoC2022/blob/main/n22d07.nim) | features recursion |
 | [Day 8](https://github.com/genius487/AoC2022/blob/main/n22d08.nim) |
 | [Day 9](https://github.com/genius487/AoC2022/blob/main/n22d09.nim) |
 | [Day 10](https://github.com/genius487/AoC2022/blob/main/n22d10.nim) |
